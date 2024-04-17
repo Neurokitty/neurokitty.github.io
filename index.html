@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <!--Head-->
     <head>
         <meta charset="UTF-8">
@@ -14,14 +15,12 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+             <!-- Onclick and ondblclick functions added to open and close the contact form -->
+             <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
-
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
 
         <!--Background video-->
         <div id="Home">
@@ -50,6 +49,54 @@
             </strong>
         </div>
 
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/katie portfolio.jpg" alt="Picture of myself">
+                        <div class="text">Imagine how awesome I could be on your team!</div>
+                    </div>
+                    <!-- Slide 2 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/database.jpg" alt="Laptop Code"> 
+                        <div class="text">I am a cyber security professional<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/laptop code.jpg" alt="Keyboard">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/keyboard.jpg" alt="SQL logo"> 
+                        <div class="text">front end development and security!</div>
+                    </div>
+                    <!-- Slide 5 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/linkedin.jpg" alt="LinkedIn"> 
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+        
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
@@ -111,9 +158,10 @@
         <!--Footer section-->
         <footer>
             <p>
-                <p class="center">&copy Securing Your Life, <a href="www.linkedin.com/in/katie-mccaffery" target="_blank">Linkedin</a></p>
+                <p class="center">&copy Securing Your Digital Stronghold, <a href="www.linkedin.com/in/katie-mccaffery" target="_blank">Linkedin</a></p>
                 <br>
             </p>
         </footer>
+        <script src="js/portfolio.js"></script>
     </body>
 </html>
